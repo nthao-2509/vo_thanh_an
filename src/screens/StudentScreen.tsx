@@ -4,13 +4,6 @@ import Colors from "../modules/Colors";
 import { dataStudent } from "../data/student";
 import { TypeStudent } from "../types/Types";
 
-interface typeData {
-  name: string;
-  age: number;
-  grade: number;
-  subject: string[];
-}
-
 const { width, height } = Dimensions.get("screen");
 
 const StudentScreen = () => {
