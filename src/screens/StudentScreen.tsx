@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, FlatList, Dimensions } from "react-native";
 import React from "react";
 import Colors from "../modules/Colors";
+import { dataStudent } from "../data/student";
+import { TypeStudent } from "../types/Types";
 
 interface typeData {
   name: string;
@@ -12,27 +14,13 @@ interface typeData {
 const { width, height } = Dimensions.get("screen");
 
 const StudentScreen = () => {
-  const data: typeData[] = [
-    {
-      name: "John Smith",
-      age: 18,
-      grade: 12,
-      subject: ["Math", "Science", "English"],
-    },
-    {
-      name: "Emily Johnson",
-      age: 17,
-      grade: 11,
-      subject: ["History", "Spanish", "Art"],
-    },
-    {
-      name: "Michael Brown",
-      age: 16,
-      grade: 10,
-      subject: ["Physics", "Chemistry", "Biology"],
-    },
-  ];
-  const renderItems = ({ item, index }: { item: typeData; index: number }) => {
+  const renderItems = ({
+    item,
+    index,
+  }: {
+    item: TypeStudent;
+    index: number;
+  }) => {
     return (
       <View
         key={index}
@@ -74,10 +62,12 @@ const StudentScreen = () => {
     <View style={styles.container}>
       <View>
         <Text style={styles.titleTop}>Students</Text>
-        <Text style={styles.numberStudent}>Total Student: {data.length}</Text>
+        <Text style={styles.numberStudent}>
+          Total Student: {dataStudent.length}
+        </Text>
       </View>
       <FlatList
-        data={data}
+        data={dataStudent}
         renderItem={renderItems}
         keyExtractor={(item, index) => index.toString()}
         numColumns={1}

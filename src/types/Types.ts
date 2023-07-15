@@ -25,3 +25,9 @@ export type TypeLocation = {
   mocked?: boolean | undefined;
   timestamp: number;
 };
+export interface TypeStudent {
+  name: string;
+  age: number;
+  grade: number;
+  subject: string[];
+}
