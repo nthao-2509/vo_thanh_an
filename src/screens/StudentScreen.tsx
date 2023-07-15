@@ -43,7 +43,7 @@ const StudentScreen = () => {
           <Text style={styles.age}>Age: {item.age}</Text>
         </View>
         <View>
-          <Text style={styles.grade}>Grade{item.grade}</Text>
+          <Text style={styles.grade}>Grade: {item.grade}</Text>
         </View>
         <View style={styles.subject}>
           <View style={styles.subjectItem}>
