@@ -3,7 +3,6 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
 import Icon from "@expo/vector-icons/Ionicons";
-import LoginScreen from "../screens/LoginScreen";
 import { TypeRouter } from "../types/Types";
 import { Routes } from "../routes/Routes";
 
